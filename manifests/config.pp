@@ -3,7 +3,9 @@
 # Examples
 #
 #   include mongodb::config
-class mongodb::config {
+class mongodb::config (
+  $port        = 17017
+){
   require boxen::config
 
   $configdir   = "${boxen::config::configdir}/mongodb"
@@ -13,5 +15,4 @@ class mongodb::config {
   $logdir      = "${boxen::config::logdir}/mongodb"
   $logfile     = "${logdir}/mongodb.log"
   $consolefile = "${logdir}/console.log"
-  $port        = 17017
 }
